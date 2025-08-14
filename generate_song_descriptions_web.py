@@ -28,10 +28,11 @@ Rules:
 - Include objective features when confidently known (tempo BPM, musical key, time signature, duration, instrumentation, structure).
 - Use rich, concrete keywords (e.g., warm guitar, airy falsetto, programmed drums, sub-bass, lo-fi sheen).
 - Capture themes/mood without quoting lyrics; never output verbatim lyrics.
+- Actively use web search to find additional information that can make the description more specific, such as notable listener comments, annotations, critic reviews, or extra metadata that reveal unique sonic traits, lyrical themes, cultural context, production details, or historical background.
 - Prefer facts found via web search; if not confidently known, omit rather than guess.
 - Minimize filler words such as 'the', 'a', 'an', 'and', unless absolutely, absolutely needed for clarity.
 - Single line output; no headers, no markdown, no extra explanations.
-- Do NOT include any links to sources in the output.
+- Do NOT include any links to sources in the output. I repeat, do not include any links to sources in the output."
 """
 
 def build_user_prompt(row: Dict[str, Any]) -> str:
@@ -45,7 +46,7 @@ def build_user_prompt(row: Dict[str, Any]) -> str:
         f"Artist: {artist}" if artist else "",
         f"Album: {album}" if album else "",
         f"Year: {year}" if year else "",
-        "Task: Produce a 300–500 character, keyword-dense description with objective musical features when confidently known. No lyric quotes. Do not include the title or artist name or links to sourcesin the output. Omit any filler words like 'a' and 'an' and 'the' unless absolutely, absolutely needed for clarity."
+        "Task: Produce a 300–500 character, keyword-dense description with objective musical features when confidently known. No lyric quotes. Do not, I repeat, do not, include the title or artist name or links to sourcesin the output. Omit any filler words like 'a' and 'an' and 'the' unless absolutely, absolutely needed for clarity. Use web search to also gather distinctive details such as reviews, annotations, cultural references, and unique sonic or thematic identifiers."
     ]
     return "\n".join([l for l in lines if l])
 
