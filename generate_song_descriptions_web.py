@@ -3,6 +3,10 @@ import os
 import time
 from typing import Dict, Any
 from openai import OpenAI, APIError, RateLimitError, APITimeoutError
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # ---------- CONFIG ----------
 INPUT_CSV  = "Songs - Sheet1.csv"      # your input CSV
