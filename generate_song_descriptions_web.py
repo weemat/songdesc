@@ -9,10 +9,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ---------- CONFIG ----------
-INPUT_CSV  = "Songs - Sheet1.csv"      # your input CSV
+INPUT_CSV  = "musicsheets.csv"      # your input CSV
 OUTPUT_CSV = "Songs_described.csv"     # output file
-TITLE_COL  = "title"                   # adjust to your sheet
-ARTIST_COL = "artist"                  # adjust to your sheet
+TITLE_COL  = "Title"                   # adjust to your sheet
+ARTIST_COL = "Artist"                  # adjust to your sheet
 ALBUM_COL  = "album"                   # optional
 YEAR_COL   = "year"                    # optional
 MODEL      = "gpt-4o-mini"             # cost-effective, good quality
