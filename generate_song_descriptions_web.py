@@ -10,7 +10,7 @@ load_dotenv()
 
 # ---------- CONFIG ----------
 INPUT_CSV  = "musicsheets.csv"      # your input CSV
-OUTPUT_CSV = "Songs_described.csv"     # output file
+OUTPUT_CSV = "musicsheets_described.csv"     # output file
 TITLE_COL  = "Title"                   # adjust to your sheet
 ARTIST_COL = "Artist"                  # adjust to your sheet
 ALBUM_COL  = "album"                   # optional
